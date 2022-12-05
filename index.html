@@ -11,7 +11,8 @@
     margin: 0;
   }
 
-  body {
+  .body {
+    font-family: Verdana;
     background-image: linear-gradient(to bottom right, blue, cyan);
     display: flex;
     align-items: center;
@@ -19,18 +20,34 @@
   }
 
   #rcorners1 {
-  border-radius: 25px;
-  background: #999999;
-  padding: 20px;
-  width: 1000px;
-  height: 600px;
+    border-radius: 25px;
+    background: #999999;
+    padding: 20px;
+    width: 1000px;
+    height: 600px;
+    
+  .links {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 200px;
+    padding: 100px;
+    text-align: center;
+    /* border-radius */
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    /* box-shadow */
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    }
 }
     </style>
   </head>
   
   <body>
-    <div class="Test" style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2);">
-      <h1 id="rcorners1">Test website</h1>
+    <div class="Test" style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2), ;">
     </div>
+    <links>Test Website</links>
   </body>
 </html>
