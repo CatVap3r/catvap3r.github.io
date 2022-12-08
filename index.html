@@ -1,63 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <div class="container">
-      <title>Test Website</title>
-    </div>
-    <style>
-      
-    html, body {
-    height: 100%;
-    margin: 0;
-  }
+<html lang="de">
+<head>
+<i
+  <title>Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  body {
+body {
     font-family: Verdana, Helvetica, sans-serif;
     background-image: linear-gradient(to bottom right, blue, cyan);
-    display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  #rcorners1 {
-    margin: auto;
-    border-radius: 25px;
-    background: #909090;
-    padding: 20px;
-    width: 200px;
-    height: 100px;
-   }
-   
-  #test1 {
-    margin: auto;
-    background-color: #fff;
-    width: 50%;
-    height: 75%;
-    padding: 20px;
-    text-align: center;
-    /* border-radius */
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    /* box-shadow */
-    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
-    -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
-    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
-   }
-  
-  #myCanvas {
-    background-color: #fff;
-    width
-      }   
 }
-    </style>
-  </head>
-  
-  <body>
-    <div class="Test">
-      <canvas id="test1">
-        <button type="button", id="rcorners">Click Me!</button>
-      </canvas>
-    </div>
-  </body>
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 750px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column side" style="background-color:#00000000;"></div>
+  <div class="column middle" id="rcorners1"></div>
+  <div class="column side" style="background-color:#00000000;"></div>
+</div>
+</body>
 </html>
+
+
