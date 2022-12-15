@@ -1,3 +1,11 @@
+       const resizeOps = () => {
+    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  };
+
+  resizeOps();
+  window.addEventListener("resize", resizeOps);
+
+
 * {
     outline: none;
     box-sizing: border-box;
@@ -38,6 +46,7 @@
     padding: 1em 2em;
     width: 100%;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
    }
    
@@ -46,6 +55,7 @@
     max-width: 1240px;
     max-height: 900px;
     height: 90vh;
+    height: calc(var(--vh, 1vh) * 90);
     display: flex;
     overflow: hidden;
     width: 100%;
