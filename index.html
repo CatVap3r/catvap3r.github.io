@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <title> Test </title>
-    <link rel="stylesheet" href="stylesheet.css">
-  
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title> Test </title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://css.gg/css?=|menu" rel="stylesheet">
+</head>
 <body>
-<div class="container">
-    <div class="wrapper">
-     <div class="header">
-      <div class="user-settings">   
-     </div>
-     <div class="main-container">
-      </div>
-     </div>
-    </div>
-   </div>
+  <nav class="navbar">
+    <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+    <h1 class="navbar-title">Header Test</h1>
+    <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+      <span class="gg-menu"></span>
+    </button>
+    <nav class="navbar-menu">
+      <button type="button">Test1</button>
+      <button type="button">Test2</button>
+      <button type="button">Test3</button>
+    </nav>
+  </nav>
+  <script type="text/javascript">
+    const toggleMenuOpen = () =>
+      document.body.classList.toggle("open");
+  </script>
+  
+  
+  
+  
+  
+  <div class="ontainer">
+  
+  
+  </div>
    
 
 </body>
