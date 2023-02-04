@@ -1,16 +1,12 @@
-* {
-  box-sizing: border-box;
- }
-   
-   body {
+  body {
      height: 100%;
      background-color: #262626;
      background-repeat: 0;
 }
 
-.container {
-    width: min (100% - 1em, 69em);
-    margin-inline: auto;
-    background-color: #efefef;
-    height: 600px;
+  .container {
+     width: min (100% - 1em, 69em);
+     margin-inline: auto;
+     background-color: #efefef;
+     height: 600px;
 }
