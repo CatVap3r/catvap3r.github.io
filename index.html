@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://catvap3r.github.io/stylesheet.css">
-    <title>Home</title>
-</head>
-
-<body>
+  <head>
+    <title>WAV to MP3 Converter</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
     <div class="container">
+    <h1>WAV to MP3 Converter</h1>
+    <input type="file" accept="audio/wav" id="wavFileInput" />
+    <button id="convertButton">Convert to MP3</button>
+    <script>
+      const wavFileInput = document.getElementById("wavFileInput");
+      const convertButton = document.getElementById("convertButton");
 
+      convertButton.addEventListener("click", () => {
+        const wavFile = wavFileInput.files[0];
+        const reader = new FileReader();
+
+        reader.readAsArrayBuffer(wavFile);
+
+        reader.onload = async () => {
+          const wavData = reader.result;
+          const mp3Data = await convertWavToMp3(wavData);
+
+          const blob = new Blob([mp3Data], { type: "audio/mp3" });
+          const url = URL.createObjectURL(blob);
+
+          const downloadLink = document.createElement("a");
+          downloadLink.href = url;
+          downloadLink.download = wavFile.name.replace(".wav", ".mp3");
+          downloadLink.click();
+
+          URL.revokeObjectURL(url);
+        };
+      });
+
+      async function convertWavToMp3(wavData) {
+        const response = await fetch("https://audio-converter-api.com/convert", {
+          method: "POST",
+          headers: {
+            "Content-Type": "audio/wav",
+          },
+          body: wavData,
+        });
+
+        return await response.arrayBuffer();
+      }
+   
+    </script>
     </div>
-</body>
-
+  </body>
 </html>
