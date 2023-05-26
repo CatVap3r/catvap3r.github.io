@@ -7,150 +7,85 @@
 
 body {
 	font-family: 'Nunito Sans', sans-serif;
-    background-color: #212529;
+  background-color: #212529;
 }
 
-.navbar {
-    position: fixed;
-    width: 75px;
-    height: 100%;
-    background-color: #343a40;
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-    transition: width 0.3s ease;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    overflow: auto;
+.nav {
+  display: flexbox;
+  height: 75px;
 }
 
-.navbar::-webkit-scrollbar {
-    display: none;
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px;
 }
 
-.navbar-content {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: block;
-    align-items: center;
-    justify-content: center;
-}
+.topnav a {
+  color: #efefef;
+  text-decoration: none;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+  width: 150px;
+  border-radius: 10px;
+  padding: 15px;
 
-.navbutton {
-    height: 50px;
-    width: 50px;
-    background-color: #495057;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    border-radius: 25px 25px 25px 25px;
-    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.12);
-    border: 0;
-    cursor: pointer;
-    color: #f8f9fa;
-    font-size: large;
-    transition: all 0.3s ease;
-    font-size: 0;
-    
-}
-
-.expanded {
-    width: 350px;
-    font-size: 20px;
-} 
-
-.navbar-content li a {
-    text-decoration: none;
-    color: #f8f9fa;
-}
-
-.navbutton.expanded:hover {
-    height: 100px;
-    transition: 0.3s ease;
-}
-
-#tButton {
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    border-radius: 25px 25px 25px 25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.12);
-    text-align: center;
-}
-
-#tButton.expanded {
-    width: 300px;
-    height: 150px;
-}
-
-.navbutton.expanded {
-    width: 300px;
-    font-size: 20px;
-}
-
-.buttonsec {
-    padding-top: 25px;
 }
 
 .maincontent {
-    height: 100%;
-    background-color: #f8f9fa;
-    max-width: 100%-50px;
+  display: flex;
+  padding: 25px;
+  height: 200px;
+
+  align-items: center;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: #495057;
-    border: 0;
-    border-radius: 25px;
+h1 {
+  font-size: 50px;
+  padding-left: 50px;
+  color: invert;
 }
 
-.content {
-    position: fixed;
+.midsection { 
+  top: 0;
+  left: 0;
+  height: 10px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.dcbutton {
-    height: 50px;
-    width: 50px;
-    background-color: #495057;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    border-radius: 25px 25px 25px 25px;
-    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.12);
-    border: 0;
-    cursor: pointer;
-    color: #f8f9fa;
-    font-size: large;
-    transition: all 0.3s ease;
-    font-size: 0;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-#dcframe {
-    height: 50px;
-    width: 50px;
-    display: flex;
-    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 25px;
-    border-radius: 25px 25px 25px 25px;
-    border: 0;
-    
-}
-
-#dcframe.expanded {
-    height: 350px;
-    width: 300px;
+.cssbuttons-io {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 2em;
+	animation: gradient 15s ease infinite;
+  color: ghostwhite;
+  overflow: hidden;
+  content: "";
+  background: #303439;
+  width: 150px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+  border: none;
 }
