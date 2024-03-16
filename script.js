@@ -51,10 +51,3 @@ currentTime();
 
 // Update the time every second
 setInterval(currentTime, 1000);
-  
-  document.getElementById("a-test").addEventListener("click", function() {
-    // Open a new browser window/tab with the specified URL
-    window.open("https://mail.google.com/", "_blank");
-  });
-
- // Tests
